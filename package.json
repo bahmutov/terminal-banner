@@ -86,9 +86,7 @@
     "prettier-standard": "8.0.0",
     "semantic-action": "1.1.0",
     "simple-commit-message": "3.3.2",
-    "standard": "10.0.3"
-  },
-  "dependencies": {
+    "standard": "10.0.3",
     "check-more-types": "2.24.0",
     "lazy-ass": "1.6.0"
   }
