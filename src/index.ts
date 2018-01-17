@@ -2,9 +2,11 @@ const defaultWidth = 40
 const terminalWidth = () =>
   (process.stdout.isTTY ? process.stdout.columns : defaultWidth) || defaultWidth
 
-const horizontalLine = (symbol?: string) => {
+const decideWidth = (minWidth:number = 0) =>
+  Math.max(minWidth, terminalWidth())
+
+const horizontalLine = (n:number, symbol?: string) => {
   symbol = symbol || '-'
-  const n = terminalWidth()
   var k
   var str = ''
   for (k = 0; k < n; k += 1) {
@@ -25,7 +27,8 @@ const centerText = (text: string): string => {
 }
 
 export const terminalBanner = (text: string, symbol?: string) => {
-  const hr = horizontalLine(symbol)
+  const n = decideWidth(text.length)
+  const hr = horizontalLine(n, symbol)
   hr()
   console.log(centerText(text))
   hr()
