@@ -5,8 +5,8 @@ const is = require('check-more-types')
 
 /* eslint-env mocha */
 describe('terminal-banner', () => {
-  const terminalBanner = require('..')
+  const terminalBanner = require('..').terminalBanner
   it('is a function', () => {
-    la(is.fn(terminalBanner))
+    la(is.fn(terminalBanner), terminalBanner)
   })
 })

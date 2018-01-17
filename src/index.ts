@@ -24,7 +24,7 @@ const centerText = (text: string): string => {
   return s
 }
 
-export default (text: string, symbol?: string) => {
+export const terminalBanner = (text: string, symbol?: string) => {
   const hr = horizontalLine(symbol)
   hr()
   console.log(centerText(text))

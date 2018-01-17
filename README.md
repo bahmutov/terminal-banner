@@ -1,48 +1,33 @@
-# mocha-banner
+# terminal-banner
 
-> Terminal-wide banner with test name before each Mocha test
+> Banner text across your terminal. Great separator for tests or long running operations.
 
 [![NPM][npm-icon] ][npm-url]
 
 [![Build status][ci-image] ][ci-url]
 [![semantic-release][semantic-image] ][semantic-url]
-[![js-standard-style][standard-image]][standard-url]
 
 ## Install
 
 Requires [Node](https://nodejs.org/en/) version 6 or above.
 
 ```sh
-npm install --save-dev mocha-banner
+npm install --save terminal-banner
 ```
 
 ## Use
 
 ```js
-// include somewhere at the beginning
-require('mocha-banner').register()
+const tb = require('terminal-banner').terminalBanner
+tb('this is good')
 ```
 
-Before each test you will get a nice banner
+Before each test you will get a nice banner across the terminal with centered text.
 
 ```
 ----------------------------------------
-         my-app / first test
+            this is good
 ----------------------------------------
-    ✓ first test
-```
-
-You can also enable banner only in some suites. Instead of putting `register()` *outside* of any any spec, place it inside
-
-```js
-describe('will have banner', () => {
-  require('mocha-banner').register()
-  it('has banner', () => {})
-  it('has banner', () => {})
-})
-describe('no banner', () => {
-  it('will not have banner', () => {})
-})
 ```
 
 ### Small print
@@ -56,7 +41,7 @@ Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2018
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/mocha-banner/issues) on Github
+[open issue](https://github.com/bahmutov/terminal-banner/issues) on Github
 
 ## MIT License
 
@@ -83,11 +68,9 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[npm-icon]: https://nodei.co/npm/mocha-banner.svg?downloads=true
-[npm-url]: https://npmjs.org/package/mocha-banner
-[ci-image]: https://travis-ci.org/bahmutov/mocha-banner.svg?branch=master
-[ci-url]: https://travis-ci.org/bahmutov/mocha-banner
+[npm-icon]: https://nodei.co/npm/terminal-banner.svg?downloads=true
+[npm-url]: https://npmjs.org/package/terminal-banner
+[ci-image]: https://travis-ci.org/bahmutov/terminal-banner.svg?branch=master
+[ci-url]: https://travis-ci.org/bahmutov/terminal-banner
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
-[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
-[standard-url]: http://standardjs.com/
