@@ -1,9 +1,9 @@
 {
-  "name": "mocha-banner",
-  "description": "Terminal-wide banner with test name before each Mocha test",
+  "name": "terminal-banner",
+  "description": "Banner text across your terminal. Great separator for tests or long running operations.",
   "version": "0.0.0-development",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
-  "bugs": "https://github.com/bahmutov/mocha-banner/issues",
+  "bugs": "https://github.com/bahmutov/terminal-banner/issues",
   "config": {
     "pre-git": {
       "commit-msg": "simple",
@@ -33,10 +33,10 @@
     "dist",
     "src/*.ts"
   ],
-  "homepage": "https://github.com/bahmutov/mocha-banner#readme",
+  "homepage": "https://github.com/bahmutov/terminal-banner#readme",
   "keywords": [
+    "terminal",
     "banner",
-    "mocha",
     "test"
   ],
   "license": "MIT",
@@ -48,7 +48,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bahmutov/mocha-banner.git"
+    "url": "https://github.com/bahmutov/terminal-banner.git"
   },
   "scripts": {
     "ban": "ban",
@@ -89,6 +89,7 @@
     "standard": "10.0.3"
   },
   "dependencies": {
-    "its-name": "1.0.0"
+    "check-more-types": "2.24.0",
+    "lazy-ass": "1.6.0"
   }
 }
