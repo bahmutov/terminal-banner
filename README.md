@@ -30,6 +30,15 @@ Before each test you will get a nice banner across the terminal with centered te
 ----------------------------------------
 ```
 
+You can pass the border character
+
+```
+tb('this is good', '*')
+****************************************
+            this is good
+****************************************
+```
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2018
